@@ -1,0 +1,1059 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía el video al fondo */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Hace que el video cubra todo el fondo */
+}
+
+header {
+    background-color: rgba(7, 37, 21, 0.8); /* Fondo gris oscuro con 80% de opacidad */
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.logo{
+    width: 120px;
+    height: 25px;  
+  }
+ 
+
+  nav{
+      display: flex;
+      align-items:center;
+      justify-content: space-around;
+     
+   
+  }
+
+  .ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    }
+    
+    .ham span{
+        background-color: #f3f3f3;
+        display:block;
+        height:3px;
+        width: 28px;
+        margin:10px auto;
+        border-radius:2px;    
+    }
+  .enlaces-menu{
+      display:flex;
+      padding:0;
+  }
+  .enlaces-menu li {
+    padding: 0 60px;
+    list-style-type: none;
+    transition: 0.3s;
+    flex-grow: 1; /* Hace que los elementos crezcan para ocupar el espacio disponible */
+}
+
+
+.enlaces-menu li a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Tiny5", sans-serif;
+    color: #f3f3f3;
+    font-weight: 600;
+    display: block; /* Hace que el enlace ocupe todo el espacio del li */
+    padding: 15px 0; /* Añade espacio interno al enlace */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* DISPOSITIVOS MOVILES */
+@media (max-width: 768px) {
+    .ham {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        transition: 0.2s 0.1s; 
+    }
+  
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .logo {
+        padding-left: 25px;
+    }
+
+    .enlaces-menu {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        /* height: 92vh; */ /* Elimina esta línea */
+        margin: 0;
+        padding: 0; 
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        width: 100%;
+        overflow-y: auto; /* Permite el scroll vertical cuando sea necesario */
+    }
+
+    .enlaces-menu li {
+        text-align: center;
+        width: 100%;
+        padding: 0px;    
+    }
+}
+
+/* Animaciones */
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.enlaces-menu.activado {
+    display: flex; 
+    animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado {
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado {
+    opacity: 0;
+}
+
+.br-3.animado {
+    transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.ham.girar:hover {
+    transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el borde de resplandor */
+.highlight {
+    color: #F4D03F; /* Color del texto */
+    text-shadow: 
+        0 0 5px #F4D03F, /* Primer nivel de resplandor */
+        0 0 10px #F4D03F; /* Segundo nivel de resplandor */
+       /* Tercer nivel de resplandor */
+     
+    font-weight: bold; /* Opcional: hacer el texto en negrita */
+}
+
+
+/* Ancho máximo para las secciones */
+/* Sección de estilo global */
+section {
+    padding: 10px;
+    margin: 1rem auto;
+    max-width: 1300px; /* Ancho máximo */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox para la imagen y el texto */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px; /* Espacio entre la imagen y el texto */
+}
+
+.about-content img {
+    display: flex;
+    margin-top: 40px;
+}
+
+.profile-image {
+    width: 340px;
+    opacity: 0.9;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #f1de8f, 0 0 60px #dfcb7e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #f1de8f, 0 0 80px #dfcb7e, 0 0 120px #dfcb7e;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 1px #fff, 0 0 5px #fff;
+    font-family: "IBM Plex Mono", monospace;
+    padding-bottom: 50px;
+}
+
+.about-text h1 {
+    margin-bottom: 70px;
+}
+
+.about-text #intro-text{
+    color: #F4D03F; /* Color del texto */
+    text-shadow: 
+        0 0 5px #F4D03F, /* Primer nivel de resplandor */
+        0 0 10px #F4D03F; /* Segundo nivel de resplandor */
+       /* Tercer nivel de resplandor */
+     
+    font-weight: bold; /* Opcional: hacer el texto en negrita */
+    font-size: 38px;
+   
+}
+
+.about-text .intro{
+    color: #ffffff; /* Color del texto */
+  
+     
+    font-weight: bold; /* Opcional: hacer el texto en negrita */
+    font-size: 35px;
+   
+}
+
+
+.cv-button {
+    display: inline-block;
+    padding: 20px 25px;
+    margin-top: 35px;
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #F4D03F;
+    border: none;
+    border-radius: 2000px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(244, 208, 63, 0.6);
+    cursor: pointer;
+}
+
+.cv-button:hover {
+    background-color: #33ce80;
+    box-shadow: 0 0 20px #33ce80;
+}
+
+.logos-redes {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.logos-redes img {
+    width: 50px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 20px rgba(244, 208, 63, 0.6));
+    box-shadow: 0 0 40px rgba(244, 208, 63, 0.8);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.logos-redes img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 50px rgba(244, 208, 63, 0.6);
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Menor espacio entre elementos */
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 200px; /* Tamaño reducido de la imagen en móviles */
+        margin: 20px 0; /* Añade margen superior e inferior para separarlo del texto */
+    }
+
+    .about-text {
+        text-align: center; /* Centrar el texto en pantallas pequeñas */
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+        padding: 0; /* Elimina el padding inferior extra */
+    }
+
+    .about-text h1 {
+        margin-bottom: 30px; /* Menor margen inferior para el título */
+    }
+
+    .cv-button {
+        margin-top: 20px; /* Ajustar margen superior */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        padding: 15px 20px; /* Ajustar padding */
+    }
+
+    .logos-redes {
+        justify-content: center; /* Centrar los logos en pantallas pequeñas */
+        margin: 20px 0; /* Añade margen superior e inferior */
+    }
+
+    .logos-redes img {
+        width: 40px; /* Tamaño reducido de los logos en móviles */
+    }
+}
+
+
+
+
+
+/*
+nav ul li a {
+    display: inline;
+    margin: 0 10px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 30px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TECNOLOGIAS */
+.tech-buttons {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tech-button {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center; /* Centro el texto debajo del logo */
+}
+
+.tech-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: filter 0.3s;
+}
+
+.tech-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.tech-button:hover img {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.tech-button:focus {
+    outline: none;
+}
+
+/* Estilos para los tooltips */
+.tooltip {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    bottom: -30px; /* Muestra el tooltip debajo del botón */
+    left: 50%;
+    font-family: "Tiny5", sans-serif;
+    transform: translateX(-50%);
+    background-color: #1f4e37;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    z-index: 1;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none; /* No permite interacción con el tooltip */
+}
+
+/* Mostrar el tooltip al hacer hover en el botón */
+.tech-button:hover .tooltip {
+    display: block;
+    opacity: 1;
+}
+
+/* Ajustar la posición del tooltip cuando esté visible */
+.tech-button:hover .tooltip {
+    bottom: -50px; /* Ajusta la posición */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .tech-button {
+        width: 60px; /* Reducir tamaño del botón en dispositivos móviles */
+        height: 60px;
+        margin-bottom: 10px; /* Espacio entre logo y texto */
+        text-decoration: none; /* Quitar subrayado de texto */
+    }
+    
+    .tech-button img {
+        width: 90%; /* Reducir tamaño de la imagen en dispositivos móviles */
+        height: 90%;
+    }
+
+    .tooltip {
+        display: block; /* Siempre mostrar el tooltip en dispositivos móviles */
+        position: static; /* Posicionar el tooltip debajo del logo */
+        bottom: 0;
+        left: 0;
+        transform: none; /* No es necesario el transform en estático */
+        background-color: transparent; /* Sin fondo en el tooltip */
+        color: rgb(255, 255, 255); /* Texto en color negro */
+        padding: 0; /* Sin padding */
+        white-space: normal; /* Permitir que el texto se divida en varias líneas */
+        text-align: center; /* Centrar texto */
+        opacity: 1; /* Hacer el texto visible */
+        pointer-events: auto; /* Permitir interacción */
+        font-size: 15px;
+        cursor: default; /* Cambiar cursor a default */
+    }
+
+    .tech-buttons {
+        gap: 20px; /* Reducir el espacio entre los botones */
+    }
+}
+
+/* Estilos específicos para dispositivos más pequeños */
+@media (max-width: 480px) {
+    .tech-button {
+        width: 50px; /* Reducir más el tamaño del botón */
+        height: 50px;
+    }
+    
+    .tooltip {
+        font-size: 11px; /* Ajustar tamaño del texto en dispositivos más pequeños */
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+
+
+
+
+
+
+
+.tech-tecnologias-proyectos {
+    display: flex;
+   margin-bottom: 30px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tech-tecnologias-proyecto {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+   
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.tech-tecnologias-proyecto img {
+    width: 80%;
+   
+    object-fit: contain;
+    border-radius: 50%;
+    transition: filter 0.3s;
+}
+
+.tech-tecnologias-proyecto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.tech-tecnologias-proyecto:hover img {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.tech-tecnologias-proyecto:focus {
+    outline: none;
+}
+
+/* Estilos para los tooltips */
+.tooltip-proyectos {
+   
+    display: none; /* Oculto por defecto */
+    position: absolute;
+
+    left: 50%;
+    font-family: "Tiny5", sans-serif;
+    transform: translateX(-50%);
+    background-color: #1f4e37;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    z-index: 1;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none; /* No permite interacción con el tooltip */
+    bottom: -10px; /* Posiciona el tooltip justo debajo del botón */
+    margin-top: 5px; /* Espacio adicional entre el botón y el tooltip */
+}
+/* Mostrar el tooltip al hacer hover en el botón */
+.tech-tecnologias-proyecto:hover .tooltip-proyectos {
+    display: block;
+    opacity: 1;
+}
+
+/* Ajustar la posición del tooltip cuando esté visible */
+.tech-tecnologias-proyecto:hover .tooltip-proyectos {
+    bottom: -30px; /* Ajusta la posición */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#image-carousel{
+    width: 80%;
+    margin-top: 60px;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide del carrusel */
+.carousel-slide {
+    display: flex;
+    
+}
+
+/* Imágenes del carrusel */
+.carousel-slide img {
+   border-radius: 40px;
+   width: 100%;
+}
+
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+
+
+
+
+.progress-bar-container {
+    width: 40%;
+    position: relative;
+    margin-left: 600px;
+    margin-top: 30px; /* Ajuste el margen superior según sea necesario */
+}
+
+.progress-bar {
+    width: 100%; /* Ancho completo */
+    height: 9px;
+    background-color: #ddd;
+    position: relative;
+    border-radius: 5px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 30%; /* Porcentaje de llenado inicial */
+    border-radius: 5px;
+}
+
+@media (max-width: 1190px) {
+    .progress-bar-container {
+        margin-left: 500px; /* Elimina el margen izquierdo */
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .progress-bar-container {
+        margin-left: 200px; /* Elimina el margen izquierdo */
+    }
+}
+
+
+
+
+
+
+
+section h1, section h2 {
+  
+    font-size: 65px;
+    align-items: center;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+   
+}
+
+section h3{
+    
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+    
+}
+
+h2{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor principal con grid */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px; /* Espacio entre columnas */
+    padding: 20px;
+    justify-content: center;
+}
+
+.projects-container p {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+        0 0 1px #fff, /* Primer nivel de resplandor */
+        0 0 5px #fff;
+    font-family: "IBM Plex Mono", monospace;
+    padding-bottom: 50px; /* Aumenta el padding inferior para mover la imagen más abajo */
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+/* Estilo para los proyectos */
+.project-fila-a, .project-fila-b {
+    background: #006769; /* Color de fondo */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los proyectos */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 280px; /* Evita que los proyectos se vuelvan demasiado pequeños */
+}
+
+.project-fila-b {
+    background: #40A578; /* Color de fondo diferente para la fila B */
+}
+
+/* Estilo para las imágenes de los proyectos */
+.imagen {
+    height: auto;
+    max-width: 100%; /* La imagen no se sale del contenedor */
+    object-fit: contain; /* Mantiene la relación de aspecto */
+    border-radius: 5px; /* Opcional, para bordes redondeados */
+}
+
+/* Contenedor de tecnologías dentro de los proyectos */
+.tech-tecnologias-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo para cada tecnología */
+.tech-tecnologias-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.tech-tecnologias-proyecto img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.tech-tecnologias-proyecto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.tech-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-top: 5px;
+}
+
+/* Animación de vibración */
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+/* Aplicar animación de vibración a los proyectos al pasar el mouse */
+.project-fila-a:hover,
+.project-fila-b:hover {
+    animation: vibrate 0.3s linear;
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 20px; /* Reducir el espacio entre proyectos */
+    }
+
+    .project-fila-a, .project-fila-b {
+        min-width: auto; /* Eliminar la restricción de ancho mínimo */
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .projects-container p {
+        font-size: 16px; /* Reducir el tamaño de la fuente */
+        padding-bottom: 20px; /* Reducir el padding inferior */
+    }
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .tech-tecnologias-proyecto {
+        width: 60px; /* Reducir tamaño del botón en dispositivos móviles */
+        height: 60px;
+        margin-bottom: 10px; /* Espacio entre logo y texto */
+        text-decoration: none; /* Quitar subrayado de texto */
+    }
+    
+    .tech-tecnologias-proyecto img {
+        width: 90%; /* Reducir tamaño de la imagen en dispositivos móviles */
+        height: 90%;
+    }
+
+    .tooltip-proyectos {
+        display: block; /* Siempre mostrar el tooltip en dispositivos móviles */
+        position: static; /* Posicionar el tooltip debajo del logo */
+        bottom: 0;
+        left: 0;
+        transform: none; /* No es necesario el transform en estático */
+        background-color: transparent; /* Sin fondo en el tooltip */
+        color: rgb(255, 255, 255); /* Texto en color blanco */
+        padding: 0; /* Sin padding */
+        white-space: normal; /* Permitir que el texto se divida en varias líneas */
+        text-align: center; /* Centrar texto */
+        opacity: 1; /* Hacer el texto visible */
+        pointer-events: auto; /* Permitir interacción */
+        font-size: 15px; /* Tamaño del texto */
+        cursor: default; /* Cambiar cursor a default */
+    }
+
+    .tech-tecnologias-proyectos {
+        gap: 20px; /* Reducir el espacio entre los botones */
+    }
+}
+
+/* Estilos específicos para dispositivos más pequeños */
+@media (max-width: 480px) {
+    .tech-tecnologias-proyecto {
+        width: 50px; /* Reducir más el tamaño del botón */
+        height: 50px;
+    }
+    
+    .tooltip-proyectos {
+        font-size: 11px; /* Ajustar tamaño del texto en dispositivos más pequeños */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de formación */
+.container-formacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #40A578; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Contenedor de texto */
+.text-container {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 200px; /* Asegura un tamaño mínimo del texto */
+}
+
+
+/* Estilo del subtítulo */
+.text-container h3 {
+    margin-bottom: 1rem;
+    font-size: 40px;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+}
+
+/* Estilo del texto */
+.text-container p {
+    font-size: 19px;
+    font-weight: bold;
+    color:  white;
+    text-shadow: 
+    0 0 1px #fff, /* Primer nivel de resplandor */
+    0 0 5px #fff; 
+    font-family: "IBM Plex Mono", monospace;
+}
+
+/* Estilo de la imagen */
+.ciber {
+    opacity: 0.9;
+    width: 250px;
+    height: auto;
+    margin-right: 00px;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .container-formacion {
+        flex-direction: column; /* Cambia la dirección de flex a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Alinea el texto al centro */
+    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .contacto {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+        gap: 20px; /* Espacio entre los elementos */
+        font-size: 16px; /* Tamaño de fuente relativo */
+        font-weight: bold;
+        color: white;
+        font-family: "IBM Plex Mono", monospace;
+    }
+    
+    .parrafos {
+        flex: 1 1 calc(33.33% - 20px); /* Los elementos ocuparán aproximadamente 1/3 del contenedor */
+        min-width: 250px; /* Ancho mínimo para asegurar legibilidad en pantallas pequeñas */
+        max-width: 300px; /* Ancho máximo para asegurar consistencia en pantallas grandes */
+        padding: 10px; /* Espacio interior */
+        border-radius: 30px;
+        opacity: 0.7;
+        height: 50px; /* Altura mínima del contenedor */
+        text-align: center;
+        background-color: #006769;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px; /* Espacio inferior entre los elementos */
+    }
+    
+    /* Media Query para dispositivos móviles */
+    @media (max-width: 768px) {
+        .parrafos {
+            flex: 1 1 calc(50% - 20px); /* Dos elementos por fila en dispositivos móviles */
+            max-width: 100%; /* Ancho máximo del elemento */
+        }
+    }
+
+
+
+
+
+
+footer {
+    background-color: rgba(7, 37, 21, 0.8); /* Fondo gris oscuro con 80% de opacidad */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p{
+    font-size: 15px;
+    font-weight: bold;
+    color:  white;
+    text-shadow: 
+    0 0 1px #fff, /* Primer nivel de resplandor */
+    0 0 5px #fff; 
+    font-family: "IBM Plex Mono", monospace;
+}
+
