@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Tiny5&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="../img/fondo.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+    <script>
+        var video = document.getElementById('background-video');
+        video.playbackRate = 0.7; // Reproduce el video a la mitad de la velocidad
+    </script>
+    <header>
+        <nav>
+            <ul class="enlaces-menu">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <button class="ham" type="button">   
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>                       
+        </nav>
+    </header>
+    
+    <section id="about">
+       
+        <div class="about-content">
+            <div class="about-text">
+                <h1>¡Hola, soy <span class="highlight">Brandon Cortez!</span></h1>
+                <p class="intro">Soy <span id="intro-text">responsable</span></p>
+                <p>Soy un desarrollador apasionado por la tecnología, con un enfoque especializado en el desarrollo web y la programación tanto en el frontend como en el backend.</p>
+                <div class="logos-redes">
+                   <a href="https://github.com/BrandonCortez2003" > <img src="../img/logos/GIT.png" alt="Logo de Git"></a>
+                    <a href="https://www.linkedin.com/in/brandon-corte-465690250/"><img  src="../img/logos/LINKEDIN.png"  alt="Logo de LinkedIn"></a>
+                    <a href="../pdf/CV_BRANDON_CORTEZ.pdf" target="_blank" class="cv-button">VER MI CV</a>
+                </div>
+                
+            </div>
+            <img src="../img/brandon2.jpg" alt="Foto de perfil" class="profile-image">
+        </div>
+    </section>
+
+    <section id="tecnologias">
+        <h2>Tecnologías</h2>
+        <div class="tech-buttons">
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/HTML.png" alt="Logo de Python">
+                <span class="tooltip">HTML</span>
+                
+            </a>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/CSS.png" alt="Logo de JavaScript">
+                <span class="tooltip">CSS</span>
+            </a>
+            <a href="https://www.java.com/es/" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/JAVA.png" alt="Logo de React">
+                <span class="tooltip">JAVA</span>
+            </a>
+            <a href="https://angular.dev" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/ANGULAR.png" alt="Logo de React">
+                <span class="tooltip">ANGULAR</span>
+            </a>
+            <a href="https://kotlinlang.org/" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/KOTLIN.png" alt="Logo de React">
+                <span class="tooltip">KOTLIN</span>
+            </a>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/JS.png" alt="Logo de React">
+                <span class="tooltip">JS</span>
+            </a>
+            <a href="https://tailwindcss.com" target="_blank" class="tech-button">
+                <img src="../img/tecnologias/TAILWIND.png" alt="Logo de React">
+                <span class="tooltip">TAILWIND</span>
+            </a>
+           
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="proyectos">
+        
+        <h2>Proyectos</h2>
+
+
+        <section id="image-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="../img/carrusel/CARRUSEL-AYUDAFAST.png" alt="Imagen 1">
+                    <img src="../img/carrusel/CARRUSEL-FERRETERIA.png" alt="Imagen 1">
+                    <img src="../img/carrusel/CARRUSEL-GIFSAPP.png" alt="Imagen 1">
+                    <img src="../img/carrusel/CARRUSEL-ACADEMIA.png" alt="Imagen 1">
+                </div>
+                
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <button class="carousel-button prev">&lt;</button>
+                <button class="carousel-button next">&gt;</button>
+            </div>
+        </section>
+
+        <div class="projects-container">
+        <div class="project-fila-a">
+            <h3>AYUDAFAST</h3>
+            <p>Aplicativo movil diseñado para la presta servicios hacia los usuarios</p>
+            <h3>TECNOLOGíA</h3>
+            <div class="tech-tecnologias-proyectos">
+                
+                <a href="https://reactjs.org" target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/KOTLIN.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">KOTLIN</span>
+                </a>
+            </div>
+            <img class="imagen" src="../img/proyectos/AYUDAFAST.png" alt="">
+        <!--<a href="enlace-al-proyecto-1">Ver Proyecto</a>-->
+        </div>
+        <div class="project-fila-b">
+            <h3>FERRETERIA IMPERIO</h3>
+            <p>Sistema de carrito de compras para una ferreteria</p>
+            <h3>TECNOLOGíA</h3>
+            <div class="tech-tecnologias-proyectos">    
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/C.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">C#</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/JS.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">JS</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/HTML.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">HTML</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/CSS.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">CSS</span>
+                </a>
+            </div>
+            <img class="imagen" src="../img/proyectos/FERRETERIA.png" alt="">
+            
+        <!--<a href="enlace-al-proyecto-1">Ver Proyecto</a>-->
+        </div>
+        <div class="project-fila-a">
+            <h3>ACADEMIA LINERTEC</h3>
+            <p>Sistema web para agilizar la gestión de matriculas de una academia.</p>
+            <h3>TECNOLOGíA</h3>
+            <div class="tech-tecnologias-proyectos">
+                
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img style="opacity: 0.9; background-color: rgba(255, 255, 255, 0.7);" src="../img/tecnologias/JAVA.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">JAVA</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/JS.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">JS</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/HTML.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">HTML</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/CSS.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">CSS</span>
+                </a>
+              
+    
+            </div>
+            <img class="imagen" src="../img/proyectos/ACADEMIA.png" alt="">
+        <!--<a href="enlace-al-proyecto-1">Ver Proyecto</a>-->
+        </div>
+        <div class="project-fila-b">
+            <h3>GIFSAPP</h3>
+            <p>Aplicación de gifs que permite listar y buscar los gifs mas populares mediante el API de giphy.com.</p>
+            <h3>TECNOLOGíA</h3>
+            <div class="tech-tecnologias-proyectos">
+                
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/ANGULAR.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">ANGULAR</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img style="opacity: 10; background-color: rgba(255, 255, 255, 0.7);" src="../img/tecnologias/TAILWIND.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">TAILWIND</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/JS.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">JS</span>
+                </a>
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/tecnologias/CSS.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">CSS</span>
+                </a>
+              
+            
+            </div>
+            <img class="imagen" src="../img/proyectos/GIFSAPP.png" alt="">
+        <!--<a href="enlace-al-proyecto-1">Ver Proyecto</a>-->
+        </div>
+    <!--<div class="project-fila-a">
+            <h3>AYUDAFAST</h3>
+            <p>Aplicativo movil diseñado para la presta servicios hacia los usuarios</p>
+            <h3>TECNOLOGIA</h3>
+            <div class="tech-tecnologias-proyectos">
+                
+                <a  target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/kotlin.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">KOTLIN</span>
+                </a>
+              
+           
+            </div>
+            <img class="imagen" src="../img/proyectos/AYUDAFAST.png" alt="">
+        <!--<a href="enlace-al-proyecto-1">Ver Proyecto</a>
+        </div>
+        <div class="project-fila-b">
+            <h3>AYUDAFAST</h3>
+            <p>Aplicativo movil diseñado para la presta servicios hacia los usuarios</p>
+            <h3>TECNOLOGIA</h3>
+            <div class="tech-tecnologias-proyectos">
+                
+                <a target="_blank" class="tech-tecnologias-proyecto">
+                    <img src="../img/kotlin.png" alt="Logo de React">
+                    <span class="tooltip-proyectos">KOTLIN</span>
+                </a>
+              
+            
+            </div>
+            <img class="imagen" src="../img/AYUDAFAST.png" alt="">
+        <!--<a href="enlace-al-proyecto-1">Ver Proyecto</a>
+        </div>-->
+    </div>
+    
+    </section>
+    <section id="contactos">
+      <!--  <h2>Formación</h2>
+        <div id="formacion" class="container-formacion">
+            <div class="text-container">
+                <h3>INSTITUTO SUPERIOR TECNOLóGICO PRIVADO CIBERTEC</h3>
+                <p>1er Modulo: Fundamentos de Programación y TI - Concluido</p>
+                <p>2do Modulo: Desarrollo de Software y Gestión de Datos – Concluido</p>
+                <p>3er Modulo: Gestión de Aplicaciones Multiplataforma – Concluido</p>
+            </div>
+            <img src="../img/logos/CIBERTEC.png" alt="Logo Cibertec" class="ciber">
+        </div>-->
+    
+        <h2>Contacto</h2>
+        <div id="contacto" class="contacto">
+            <div class="parrafos" ><p><i class="fa-solid fa-phone"></i> 930473825</p></div>
+            <div class="parrafos"><p><i class="fa-solid fa-envelope"></i> cortezbrandon866@gmail.com</p></div>
+            <div class="parrafos"><p><i class="fa-brands fa-github"></i> BrandonCortez2003</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Brandon Orlando Cortez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script src="../js/animacion.js"></script>
+</html>

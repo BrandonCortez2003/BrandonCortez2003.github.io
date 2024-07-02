@@ -258,17 +258,33 @@ section {
        /* Tercer nivel de resplandor */
      
     font-weight: bold; /* Opcional: hacer el texto en negrita */
-    font-size: 38px;
+    font-size:40px;
    
 }
 
+
+
+
 .about-text .intro{
     color: #ffffff; /* Color del texto */
-  
-     
     font-weight: bold; /* Opcional: hacer el texto en negrita */
     font-size: 35px;
    
+}
+
+
+@media (max-width: 768px) {
+    .about-text #intro-text{
+       
+        font-size: 30px;
+}
+
+.about-text .intro{
+   
+    font-size: 30px;
+   
+}
+
 }
 
 
@@ -387,6 +403,10 @@ nav ul li a {
 
 
 /* TECNOLOGIAS */
+#tecnologias h2{
+    font-size: 65px;
+}
+
 .tech-buttons {
     display: flex;
     margin-top: 100px;
@@ -492,14 +512,19 @@ nav ul li a {
 
     .tech-buttons {
         gap: 20px; /* Reducir el espacio entre los botones */
+         margin-top: 30px;
+    }
+
+    #tecnologias h2{
+        font-size: 50px;
     }
 }
 
 /* Estilos específicos para dispositivos más pequeños */
 @media (max-width: 480px) {
     .tech-button {
-        width: 50px; /* Reducir más el tamaño del botón */
-        height: 50px;
+        width: 40px; /* Reducir más el tamaño del botón */
+        height: 40px;
     }
     
     .tooltip {
@@ -598,10 +623,12 @@ nav ul li a {
 
 
 
-
+#proyectos h2{
+    font-size: 65px;
+}
 
 #image-carousel{
-    width: 80%;
+    width: 100%;
     margin-top: 60px;
 }
 
@@ -609,6 +636,7 @@ nav ul li a {
 .carousel-container {
     position: relative;
     width: 100%;
+    padding: 0;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -618,23 +646,23 @@ nav ul li a {
 /* Slide del carrusel */
 .carousel-slide {
     display: flex;
-    
 }
 
 /* Imágenes del carrusel */
 .carousel-slide img {
-   border-radius: 40px;
-   width: 100%;
+    border-radius: 40px;
+    width: 100%;
 }
 
 /* Botones de navegación */
 .carousel-button {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
+    font-family: "Tiny5", sans-serif;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
@@ -653,24 +681,21 @@ nav ul li a {
     right: 10px;
 }
 
-
-
-
-
-
+/* Barra de progreso */
 .progress-bar-container {
-    width: 40%;
     position: relative;
-    margin-left: 600px;
-    margin-top: 30px; /* Ajuste el margen superior según sea necesario */
+    width: 100%;
+    margin-top: 20px;
+    text-align: center; /* Centrar horizontalmente */
 }
 
 .progress-bar {
-    width: 100%; /* Ancho completo */
+    width: 40%; /* Ancho de la barra de progreso */
     height: 9px;
     background-color: #ddd;
     position: relative;
     border-radius: 5px;
+    margin: 0 auto; /* Centrar horizontalmente */
 }
 
 .progress-bar-fill {
@@ -681,18 +706,15 @@ nav ul li a {
 }
 
 @media (max-width: 1190px) {
-    .progress-bar-container {
-        margin-left: 500px; /* Elimina el margen izquierdo */
-    }
+    
 }
 
-/* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
     .progress-bar-container {
-        margin-left: 200px; /* Elimina el margen izquierdo */
+        width: 80%; /* Ancho más pequeño para dispositivos móviles */
+        margin: 0 auto; /* Centrar horizontalmente */
     }
 }
-
 
 
 
@@ -731,26 +753,34 @@ h2{
 
 
 
-
+#proyectos{
+    margin-bottom: 0px;
+}
 
 /* Contenedor principal con grid */
 .projects-container {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px; /* Espacio entre columnas */
-    padding: 20px;
+    margin-top: 90px;
     justify-content: center;
 }
 
 .projects-container p {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     text-shadow: 
         0 0 1px #fff, /* Primer nivel de resplandor */
         0 0 5px #fff;
     font-family: "IBM Plex Mono", monospace;
-    padding-bottom: 50px; /* Aumenta el padding inferior para mover la imagen más abajo */
+   margin-bottom: 0;
+    /* Aumenta el padding inferior para mover la imagen más abajo */
+}
+.projects-container h3 {
+ margin-bottom: 0;
+ font-size: 30px;
 }
 
 .no-margin-top {
@@ -765,7 +795,7 @@ h2{
     padding: 20px;
     text-align: center;
     box-sizing: border-box;
-    min-width: 280px; /* Evita que los proyectos se vuelvan demasiado pequeños */
+    min-width: 200px; /* Evita que los proyectos se vuelvan demasiado pequeños */
 }
 
 .project-fila-b {
@@ -786,6 +816,7 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-top: 10px;
 }
 
 /* Estilo para cada tecnología */
@@ -794,8 +825,8 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
@@ -805,10 +836,10 @@ h2{
 }
 
 .tech-tecnologias-proyecto img {
-    width: 50px;
+    width: 30px;
     height: 50px;
     object-fit: contain;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .tech-tecnologias-proyecto:hover {
@@ -853,6 +884,8 @@ h2{
 
 @media (max-width: 768px) {
     .projects-container {
+        width: 80%;
+        padding: 45px;
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
         gap: 20px; /* Reducir el espacio entre proyectos */
     }
@@ -871,8 +904,8 @@ h2{
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
     .tech-tecnologias-proyecto {
-        width: 60px; /* Reducir tamaño del botón en dispositivos móviles */
-        height: 60px;
+        width: 30px; /* Reducir tamaño del botón en dispositivos móviles */
+        height: 30px;
         margin-bottom: 10px; /* Espacio entre logo y texto */
         text-decoration: none; /* Quitar subrayado de texto */
     }
@@ -895,7 +928,7 @@ h2{
         text-align: center; /* Centrar texto */
         opacity: 1; /* Hacer el texto visible */
         pointer-events: auto; /* Permitir interacción */
-        font-size: 15px; /* Tamaño del texto */
+        font-size: 11px; /* Tamaño del texto */
         cursor: default; /* Cambiar cursor a default */
     }
 
@@ -907,8 +940,8 @@ h2{
 /* Estilos específicos para dispositivos más pequeños */
 @media (max-width: 480px) {
     .tech-tecnologias-proyecto {
-        width: 50px; /* Reducir más el tamaño del botón */
-        height: 50px;
+        width: 30px; /* Reducir más el tamaño del botón */
+        height: 30px;
     }
     
     .tooltip-proyectos {
@@ -997,10 +1030,15 @@ h2{
 
 
 
-
+    #contactos h2{
+        font-size: 65px;
+        margin: 0px;
+        
+    }
 
 
     .contacto {
+        margin-top: 39px;
         display: flex;
         flex-wrap: wrap; /* Permite que los elementos se envuelvan */
         justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
@@ -1017,7 +1055,7 @@ h2{
         max-width: 300px; /* Ancho máximo para asegurar consistencia en pantallas grandes */
         padding: 10px; /* Espacio interior */
         border-radius: 30px;
-        opacity: 0.7;
+        
         height: 50px; /* Altura mínima del contenedor */
         text-align: center;
         background-color: #006769;
@@ -1031,8 +1069,13 @@ h2{
     @media (max-width: 768px) {
         .parrafos {
             flex: 1 1 calc(50% - 20px); /* Dos elementos por fila en dispositivos móviles */
-            max-width: 100%; /* Ancho máximo del elemento */
+            max-width: 80%; /* Ancho máximo del elemento */
         }
+
+        #contactos h2{
+            font-size: 52px;
+        }
+    
     }
 
 
@@ -1042,18 +1085,15 @@ h2{
 
 footer {
     background-color: rgba(7, 37, 21, 0.8); /* Fondo gris oscuro con 80% de opacidad */
-    color: #fff;
     padding: 10px;
     text-align: center;
 }
 
 footer p{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     color:  white;
-    text-shadow: 
-    0 0 1px #fff, /* Primer nivel de resplandor */
-    0 0 5px #fff; 
+    opacity: 0.4;
     font-family: "IBM Plex Mono", monospace;
 }
 
