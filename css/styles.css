@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    
+    background-image: url();
 }
 
 .tiny5-regular {
@@ -37,7 +37,7 @@ body, html {
 header {
     background-color: rgba(7, 37, 21, 0.8); /* Fondo gris oscuro con 80% de opacidad */
     color: #fff;
-    padding: 14px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -235,9 +235,6 @@ section {
 }
 
 .about-text {
-    flex: 1;
-    margin-right: 20px;
-    text-align: left;
     font-size: 25px;
     font-weight: bold;
     color: white;
@@ -247,7 +244,8 @@ section {
 }
 
 .about-text h1 {
-    margin-bottom: 70px;
+  
+    margin-top: 70px;
 }
 
 .about-text #intro-text{
@@ -284,6 +282,12 @@ section {
     font-size: 30px;
    
 }
+
+.about-text h1 {
+  
+    margin-top: 0px;
+}
+
 
 }
 
@@ -632,7 +636,6 @@ nav ul li a {
 }
 
 #image-carousel{
-    width: 100%;
     margin-top: 60px;
 }
 
@@ -802,6 +805,10 @@ h2{
     min-width: 200px; /* Evita que los proyectos se vuelvan demasiado pequeños */
 }
 
+.project-fila-a h3, .project-fila-b  h3{
+    margin-top: 10px;
+}
+
 .project-fila-b {
     background: #40A578; /* Color de fondo diferente para la fila B */
 }
@@ -889,7 +896,7 @@ h2{
 @media (max-width: 768px) {
     .projects-container {
         width: 80%;
-        padding: 45px;
+        padding: 40px;
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
         gap: 20px; /* Reducir el espacio entre proyectos */
         margin: 0px;
@@ -1073,6 +1080,12 @@ h2{
         justify-content: center;
         margin-bottom: 20px; /* Espacio inferior entre los elementos */
     }
+
+
+/* Aplicar animación de vibración a los proyectos al pasar el mouse */
+.parrafos:hover {
+    animation: vibrate 0.3s linear;
+}
     
     /* Media Query para dispositivos móviles */
     @media (max-width: 768px) {
@@ -1106,3 +1119,8 @@ footer p{
     font-family: "IBM Plex Mono", monospace;
 }
 
+@media (max-width: 768px) {
+    footer p{
+        font-size: 10px;
+    }
+}
