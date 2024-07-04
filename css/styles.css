@@ -965,6 +965,49 @@ h2{
     }
 }
 
+.ver-proyectoA {
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 15px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #40A578;
+    border: none;
+    border-radius: 2000px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(117, 189, 108, 0.6);
+    cursor: pointer;
+}
+
+.ver-proyectoA:hover {
+    background-color: #33ce80;
+    box-shadow: 0 0 20px #33ce80;
+}
+
+.ver-proyectoB {
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 15px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #006769;
+    border: none;
+    border-radius: 2000px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(117, 189, 108, 0.6);
+    cursor: pointer;
+}
+
+.ver-proyectoB:hover {
+    background-color: #067d80;
+    box-shadow: 0 0 20px #1ba3a5;
+}
 
 
 
