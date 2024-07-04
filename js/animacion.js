@@ -115,3 +115,21 @@ menuItems.forEach(item => {
         document.body.style.overflow = 'auto'; // Asegúrate de que el desbordamiento se restablezca al cerrar el menú
     });
 });
+
+function openModal(imgElement) {
+    var modal = document.getElementById('modal');
+    var modalImage = document.getElementById('modalImage');
+    modal.style.display = 'flex';
+    modalImage.src = imgElement.src;
+}
+
+function closeModal() {
+    var modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
+
+// Asegúrate de que el modal esté oculto al cargar la página
+document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+});
