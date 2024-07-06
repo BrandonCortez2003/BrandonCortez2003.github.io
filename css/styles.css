@@ -2,12 +2,12 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*background-image: url('../img/fondo.png');
-    background-size: cover; /* Escala la imagen para que cubra el contenedor sin distorsionarse 
-    background-position: center; /* Centra la imagen en el contenedor 
-    background-repeat: no-repeat; /* No repite la imagen 
+    /*background-image: url('../img/fondo.png');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
-    overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 .tiny5-regular {
@@ -43,7 +43,8 @@ body, html {
 header {
     background-color: rgba(7, 37, 21, 0.8); /* Fondo gris oscuro con 80% de opacidad */
     color: #fff;
-    padding: 10px;
+   padding: 10px;
+
     text-align: center;
 }
 
@@ -63,8 +64,8 @@ header {
       display: flex;
       align-items:center;
       justify-content: space-around;
-     
-   
+      position: relative;
+      
   }
 
   .ham{
@@ -113,7 +114,7 @@ header {
         display: block;
         cursor: pointer;
         position: absolute;
-        top: 15px;
+        top: 0px;
         right: 25px;
         transition: 0.2s 0.1s; 
     }
